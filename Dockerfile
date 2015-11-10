@@ -32,9 +32,11 @@ RUN npm install hubot-suggest --save && npm install
 # Activate some built-in scripts
 ADD hubot/hubot-scripts.json /cloudbot/
 ADD hubot/external-scripts.json /cloudbot/
+#COPY env.sh /cloudbot
 
 RUN npm install cheerio --save && npm install
 
 # Run HuBot
-CMD bin/hubot -a slack
-#CMD ["/bin/sh", "-c", "aws s3 cp --region us-west-2 s3://dbagan-temp/env.sh .; . ./env.sh; bin/hubot --adapter slack"]
+# CMD bin/hubot -a slack
+# CMD ["/bin/sh", "-c", "/cloudbot/env.sh; bin/hubot --adapter slack"]
+CMD ["/bin/sh", "-c", "aws s3 cp --region eu-west-2 s3://docker-aegon-repo/env.sh .; . ./env.sh; bin/hubot --adapter slack"]
