@@ -4,6 +4,6 @@ redis:
  - "6379"
 hubot:
  build: .
- env_file: .env
+ env_file: .env # -- you need one of these to feed it settings locally. 
  links: 
  - redis
