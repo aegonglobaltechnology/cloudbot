@@ -21,13 +21,16 @@ USER	cloudbot
 WORKDIR /cloudbot
 
 # Install hubot
-RUN yo hubot --owner="David Bagan <david.bagan@transamerica.com>" --name="cloudbot" --description="AGT Cloud Team's Hubot" --defaults
+RUN yo hubot --owner="AGT" --name="cloudbot" --description="AGT Cloud Team's Hubot" --defaults
 
 # Slack and AWS related adapters. More to come later
 RUN npm install hubot-slack --save && npm install
 RUN npm install hubot-github --save && npm install
-#RUN npm install hubot-s3-brain --save && npm install
+RUN npm install hubot-plusplus --save && npm install
 RUN npm install hubot-suggest --save && npm install
+Run npm install hubot-auth --save && npm install
+RUN npm install hubot-aws --save && npm install
+RUN npm install hubot-hint --save && npm install
 
 # Activate some built-in scripts
 ADD hubot/hubot-scripts.json /cloudbot/

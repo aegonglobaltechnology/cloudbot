@@ -8,5 +8,9 @@
   "hubot-maps",
   "hubot-rules",
   "hubot-shipit",
+  "hubot-plusplus",
+  "hubot-auth",
+  "hubot-hint",
+  "hubot-aws",
   "hubot-suggest"
 ]
