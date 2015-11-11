@@ -1,5 +1,5 @@
 redis:
- image: dbagan/redis
+ image: ec2-52-33-129-237.us-west-2.compute.amazonaws.com/redis
  expose: 
  - "6379"
 cloudbot:

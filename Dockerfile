@@ -26,7 +26,7 @@ RUN yo hubot --owner="David Bagan <fake.email@transamerica.com>" --name="cloudbo
 # Slack and AWS related adapters. More to come later
 RUN npm install hubot-slack --save && npm install
 RUN npm install hubot-github --save && npm install
-RUN npm install hubot-s3-brain --save && npm install
+#RUN npm install hubot-s3-brain --save && npm install
 RUN npm install hubot-suggest --save && npm install
 
 # Activate some built-in scripts
