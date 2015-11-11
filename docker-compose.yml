@@ -1,0 +1,6 @@
+cloudbot:
+	build: .
+	links:
+		- redis
+redis:
+	image: ec2-52-33-129-237.us-west-2.compute.amazonaws.com/redis
