@@ -1,4 +1,4 @@
-FROM node:5
+FROM node:5-slim
 MAINTAINER David Bagan
 
 RUN apt-get update
@@ -21,7 +21,7 @@ USER	cloudbot
 WORKDIR /cloudbot
 
 # Install hubot
-RUN yo hubot --owner="David Bagan <fake.email@transamerica.com>" --name="cloudbot" --description="AGT Cloud Team's Hubot" --defaults
+RUN yo hubot --owner="David Bagan <david.bagan@transamerica.com>" --name="cloudbot" --description="AGT Cloud Team's Hubot" --defaults
 
 # Slack and AWS related adapters. More to come later
 RUN npm install hubot-slack --save && npm install
