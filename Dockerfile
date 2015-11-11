@@ -37,6 +37,6 @@ ADD hubot/external-scripts.json /cloudbot/
 RUN npm install cheerio --save && npm install
 
 # Run HuBot
-# CMD bin/hubot -a slack
+CMD bin/hubot -a slack
 # CMD ["/bin/sh", "-c", "/cloudbot/env.sh; bin/hubot --adapter slack"]
-CMD ["/bin/sh", "-c", "aws s3 cp --region eu-west-2 s3://docker-aegon-repo/env.sh .; . ./env.sh; bin/hubot --adapter slack"]
+# CMD ["/bin/sh", "-c", "aws s3 cp --region eu-west-2 s3://docker-aegon-repo/env.sh .; . ./env.sh; bin/hubot --adapter slack"]

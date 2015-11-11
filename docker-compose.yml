@@ -1,6 +1,9 @@
-cloudbot:
-	build: .
-	links:
-		- redis
 redis:
-	image: ec2-52-33-129-237.us-west-2.compute.amazonaws.com/redis
+ image: dbagan/redis
+ expose: 
+ - "6379"
+cloudbot:
+ build: .
+ env_file: .env
+ links: 
+ - redis
